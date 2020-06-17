@@ -4,7 +4,7 @@ set release stable
 set version 31.20200517.3.0
 set url_prefix https://builds.coreos.fedoraproject.org/prod/streams/${release}/builds/${version}/x86_64/fedora-coreos-${version}-live-
 
-kernel ${url_prefix}kernel-x86_64 ttyS1,115200n8 ignition.firstboot ignition.platform.id=packet rd.neednet=1 ip=dhcp,dhcp6
+kernel ${url_prefix}kernel-x86_64 console=ttyS1,115200 ignition.firstboot ignition.platform.id=packet rd.neednet=1 ip=dhcp,dhcp6
 initrd ${url_prefix}initramfs.x86_64.img
 
 boot
